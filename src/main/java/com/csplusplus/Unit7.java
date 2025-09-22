@@ -59,7 +59,7 @@ public class Unit7 {
         ArraryList<Integer) newList = new ArraryList<>();
         for (int i = 0; i < list.size(); i++){
             if (list.get(i) % 2 == 0){
-                newList.add(new Integer(list.get(i));
+                newList.add(new Integer(list.get(i)));
             }
         return newlist;  // Placeholder return value
     }
@@ -72,7 +72,7 @@ public class Unit7 {
         ArrayList<Integer> newList = new ArraryList<>(list);
         for (int i = 0; i < list.size(); i++){
             if (list.get(i) % 5 == 0){
-                newList.remove(Integer.valueOf(list.get(i));
+                newList.remove(Integer.valueOf(list.get(i)));
             }
         }
     }
@@ -84,7 +84,7 @@ public class Unit7 {
         // TODO: Implement this method
         ArrayList<Integer> newList = new ArraryList<>();
         for (int i = 0; i < list.size(); i++){
-            newList.add(new Integer(list.get(i));
+            newList.add(new Integer(list.get(i)));
         }
     }
 
@@ -96,7 +96,7 @@ public class Unit7 {
         ArrayList<Integer> newList = new ArrayList<>();
         for (int i = 0; i < list.size(); i++){
             int pos = (int)(Math.random * (list.size()));
-            newList.add(new Integer(list.get(pos));
-            list.remove(Integer.valueOf(list.get(pos));
+            newList.add(new Integer(list.get(pos)));
+            list.remove(Integer.valueOf(list.get(pos)));
     }
 }
