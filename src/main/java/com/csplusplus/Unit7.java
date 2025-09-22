@@ -60,11 +60,12 @@ public class Unit7 {
     // DO NOT use streams, Collections, or other methods beyond size(), add(), get(), set(), and remove().
     public static ArrayList<Integer> getEvenElements(ArrayList<Integer> list) {
         // TODO: Implement this method
-        ArraryList<Integer> newList = new ArraryList<>();
+        ArrayList<Integer> newList = new ArrayList<>(); 
         for (int i = 0; i < list.size(); i++){
             if (list.get(i) % 2 == 0){
                 newList.add(list.get(i));
             }
+        }
         return newlist;  // Placeholder return value
     }
 
