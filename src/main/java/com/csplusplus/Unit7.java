@@ -9,7 +9,11 @@ public class Unit7 {
     // DO NOT use the Collections class or any additional methods beyond size(), add(), get(), set(), and remove().
     public static int sumOfElements(ArrayList<Integer> list) {
         // TODO: Implement this method
-        return 0;  // Placeholder return value
+        int sum = 0;
+        for (int i = 0; i < list.size(); i++){
+            sum += list.get(i);
+        }
+        return sum;  // Placeholder return value
     }
 
     // 2. Method that removes all instances of a specific element from the ArrayList
@@ -17,6 +21,10 @@ public class Unit7 {
     // DO NOT use removeIf(), Collections, or other methods beyond size(), add(), get(), set(), and remove().
     public static void removeAllInstances(ArrayList<Integer> list, int elementToRemove) {
         // TODO: Implement this method
+        for (int i = list.size() - 1; i >= 0; i--) {
+            if (list.get(i) == elementToRemove) {
+                list.remove(i);
+            }
     }
 
     // 3. Method that doubles each element in the ArrayList
@@ -24,6 +32,10 @@ public class Unit7 {
     // DO NOT use Collections or other methods beyond size(), add(), get(), set(), and remove().
     public static void doubleAllElements(ArrayList<Integer> list) {
         // TODO: Implement this method
+        for(int i = 0; i < list.size(); i++){
+            int num = list.get(i);
+            set (num, num += 2);
+        }
     }
 
     // 4. Method that adds a new element to the list only if it is not already present
@@ -31,6 +43,12 @@ public class Unit7 {
     // DO NOT use contains(), Collections, or other methods beyond size(), add(), get(), set(), and remove().
     public static void addIfNotPresent(ArrayList<Integer> list, int newElement) {
         // TODO: Implement this method
+        for(int i = 0; i < list.size(); i++){
+            if (list.get(i) == newElement){
+                break;
+            }
+        }
+        list.add(new Integer(newElement));
     }
 
     // 5. Method that returns a new ArrayList containing only the even elements from the input list
@@ -38,7 +56,12 @@ public class Unit7 {
     // DO NOT use streams, Collections, or other methods beyond size(), add(), get(), set(), and remove().
     public static ArrayList<Integer> getEvenElements(ArrayList<Integer> list) {
         // TODO: Implement this method
-        return null;  // Placeholder return value
+        ArraryList<Integer) newList = new ArraryList<>();
+        for (int i = 0; i < list.size(); i++){
+            if (list.get(i) % 2 == 0){
+                newList.add(new Integer(list.get(i));
+            }
+        return newlist;  // Placeholder return value
     }
 
     // 6. Method that removes elements divisible by 5
@@ -46,6 +69,12 @@ public class Unit7 {
     // DO NOT use removeIf(), Collections, or other methods beyond size(), add(), get(), set(), and remove().
     public static void removeElementsDivisibleBy5(ArrayList<Integer> list) {
         // TODO: Implement this method
+        ArrayList<Integer> newList = new ArraryList<>(list);
+        for (int i = 0; i < list.size(); i++){
+            if (list.get(i) % 5 == 0){
+                newList.remove(Integer.valueOf(list.get(i));
+            }
+        }
     }
 
     // 7. Method that reverses the list without using the Collections class
@@ -53,6 +82,10 @@ public class Unit7 {
     // DO NOT use Collections or other methods beyond size(), add(), get(), set(), and remove().
     public static void reverseList(ArrayList<Integer> list) {
         // TODO: Implement this method
+        ArrayList<Integer> newList = new ArraryList<>();
+        for (int i = 0; i < list.size(); i++){
+            newList.add(new Integer(list.get(i));
+        }
     }
 
     // 8. Method that shuffles the elements of the list
@@ -60,5 +93,10 @@ public class Unit7 {
     // DO NOT use the Collections.shuffle() or other methods beyond size(), add(), get(), set(), and remove().
     public static void shuffleList(ArrayList<Integer> list) {
         // TODO: Implement this method
+        ArrayList<Integer> newList = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++){
+            int pos = (int)(Math.random * (list.size()));
+            newList.add(new Integer(list.get(pos));
+            list.remove(Integer.valueOf(list.get(pos));
     }
 }
