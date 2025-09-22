@@ -101,10 +101,12 @@ public class Unit7 {
     // DO NOT use the Collections.shuffle() or other methods beyond size(), add(), get(), set(), and remove().
     public static void shuffleList(ArrayList<Integer> list) {
         // TODO: Implement this method
-        ArrayList<Integer> newList = new ArrayList<>();
-        for (int i = 0; i < list.size(); i++){
-            int pos = (int)(Math.random * (list.size()));
-            newList.add(new Integer(list.get(pos)));
-            list.remove(Integer.valueOf(list.get(pos)));
+        Random rand = new Random();
+        for (int i = list.size() - 1; i > 0; i--) {
+            int randomIndex = rand.nextInt(i + 1);
+            int temp = list.get(i);
+            list.set(i, list.get(randomIndex));
+            list.set(randomIndex, temp);
+        }
     }
 }
