@@ -33,8 +33,8 @@ public class Unit7 {
     public static void doubleAllElements(ArrayList<Integer> list) {
         // TODO: Implement this method
         for(int i = 0; i < list.size(); i++){
-            int num = list.get(i);
-            set (num, num += 2);
+            int num = list.get(i) * 2;
+            list.set(i, num);
         }
     }
 
@@ -43,12 +43,16 @@ public class Unit7 {
     // DO NOT use contains(), Collections, or other methods beyond size(), add(), get(), set(), and remove().
     public static void addIfNotPresent(ArrayList<Integer> list, int newElement) {
         // TODO: Implement this method
-        for(int i = 0; i < list.size(); i++){
-            if (list.get(i) == newElement){
-                break;
+        boolean isPresent = false;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == newElement) {
+                isPresent = true;
+                break; 
             }
         }
-        list.add(new Integer(newElement));
+        if (!isPresent) {
+            list.add(newElement); 
+        }
     }
 
     // 5. Method that returns a new ArrayList containing only the even elements from the input list
@@ -56,10 +60,10 @@ public class Unit7 {
     // DO NOT use streams, Collections, or other methods beyond size(), add(), get(), set(), and remove().
     public static ArrayList<Integer> getEvenElements(ArrayList<Integer> list) {
         // TODO: Implement this method
-        ArraryList<Integer) newList = new ArraryList<>();
+        ArraryList<Integer> newList = new ArraryList<>();
         for (int i = 0; i < list.size(); i++){
             if (list.get(i) % 2 == 0){
-                newList.add(new Integer(list.get(i)));
+                newList.add(list.get(i));
             }
         return newlist;  // Placeholder return value
     }
@@ -69,10 +73,9 @@ public class Unit7 {
     // DO NOT use removeIf(), Collections, or other methods beyond size(), add(), get(), set(), and remove().
     public static void removeElementsDivisibleBy5(ArrayList<Integer> list) {
         // TODO: Implement this method
-        ArrayList<Integer> newList = new ArraryList<>(list);
-        for (int i = 0; i < list.size(); i++){
-            if (list.get(i) % 5 == 0){
-                newList.remove(Integer.valueOf(list.get(i)));
+        for (int i = list.size() - 1; i >= 0; i--){
+            if (list.get(i) % 5 == 0) {
+                list.remove(i);
             }
         }
     }
@@ -82,9 +85,14 @@ public class Unit7 {
     // DO NOT use Collections or other methods beyond size(), add(), get(), set(), and remove().
     public static void reverseList(ArrayList<Integer> list) {
         // TODO: Implement this method
-        ArrayList<Integer> newList = new ArraryList<>();
-        for (int i = 0; i < list.size(); i++){
-            newList.add(new Integer(list.get(i)));
+        int leftSide = 0;
+        int rightSide = list.size() - 1;
+        while (left < right) {
+            int num = list.get(left);
+            list.set(left, list.get(right));
+            list.set(right, temp);
+            left++;
+            right--;
         }
     }
 
