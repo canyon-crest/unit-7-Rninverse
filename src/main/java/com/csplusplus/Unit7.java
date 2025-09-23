@@ -25,6 +25,7 @@ public class Unit7 {
             if (list.get(i) == elementToRemove) {
                 list.remove(i);
             }
+        }
     }
 
     // 3. Method that doubles each element in the ArrayList
@@ -66,7 +67,7 @@ public class Unit7 {
                 newList.add(list.get(i));
             }
         }
-        return newlist;  // Placeholder return value
+        return newList;  // Placeholder return value
     }
 
     // 6. Method that removes elements divisible by 5
@@ -91,7 +92,7 @@ public class Unit7 {
         while (left < right) {
             int num = list.get(left);
             list.set(left, list.get(right));
-            list.set(right, temp);
+            list.set(right, num);
             left++;
             right--;
         }
@@ -102,12 +103,14 @@ public class Unit7 {
     // DO NOT use the Collections.shuffle() or other methods beyond size(), add(), get(), set(), and remove().
     public static void shuffleList(ArrayList<Integer> list) {
         // TODO: Implement this method
-        Random rand = new Random();
-        for (int i = list.size() - 1; i > 0; i--) {
-            int randomIndex = rand.nextInt(i + 1);
-            int temp = list.get(i);
-            list.set(i, list.get(randomIndex));
-            list.set(randomIndex, temp);
+        ArrayList<Integer> newList = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++){
+            int randPos = (int)(Math.random() * list.size())
+            newList.add(list.get(randPos);
+            list.remove(randPos);
+        }
+        for (int i = 0; i < newList.size(); i++){
+            list.add(newList.get(i));
         }
     }
 }
