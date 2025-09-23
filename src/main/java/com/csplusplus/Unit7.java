@@ -89,12 +89,12 @@ public class Unit7 {
         // TODO: Implement this method
         int leftSide = 0;
         int rightSide = list.size() - 1;
-        while (left < right) {
-            int num = list.get(left);
-            list.set(left, list.get(right));
-            list.set(right, num);
-            left++;
-            right--;
+        while (leftSide < rightSide) {
+            int num = list.get(leftSide);
+            list.set(leftSide, list.get(rightSide));
+            list.set(rightSide, num);
+            leftSide++;
+            rightSide--;
         }
     }
 
